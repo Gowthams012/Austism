@@ -1,0 +1,114 @@
+.connect-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at 5% 5%, #e8f9f7 0%, #ffffff 40%);
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.brand-text { font-weight: 800; font-size: 1.1rem; }
+
+.user-avatar {
+  width: 38px; height: 38px;
+  background: #3366FF; color: white;
+  border-radius: 12px; display: flex;
+  align-items: center; justify-content: center;
+  font-weight: 700;
+}
+
+.dashboard-content { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+/* Tabs matching the "Parent/Doctor" toggle on Login */
+.tab-container {
+  display: flex;
+  background: #f2f2f7;
+  padding: 5px;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #8e8e93;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: #3366FF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.interaction-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.label { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: #8e8e93; letter-spacing: 0.8px; }
+
+/* Chat Styles */
+.chat-preview { margin: 1.5rem 0; display: flex; flex-direction: column; gap: 15px; }
+
+.message { max-width: 80%; padding: 12px 16px; border-radius: 16px; font-size: 0.95rem; line-height: 1.4; }
+.message.incoming { background: #f2f2f7; align-self: flex-start; border-bottom-left-radius: 4px; }
+.message.outgoing { background: #3366FF; color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
+
+.timestamp { display: block; font-size: 0.7rem; margin-top: 5px; opacity: 0.6; }
+
+.input-area { display: flex; gap: 10px; border-top: 1px solid #f2f2f7; padding-top: 1.5rem; }
+.input-area input { flex: 1; padding: 12px; border: 1.5px solid #f2f2f7; border-radius: 12px; outline: none; }
+.input-area input:focus { border-color: #3366FF; }
+
+.send-btn { background: #3366FF; color: white; border: none; padding: 0 20px; border-radius: 12px; font-weight: 600; cursor: pointer; }
+
+/* Appointment Styles */
+.apt-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: #fcfdfe;
+  border-radius: 16px;
+  border: 1px solid #f2f2f7;
+  margin: 1.5rem 0;
+}
+
+.apt-info h4 { margin: 0; color: #3366FF; }
+.apt-info p { margin: 4px 0 0; color: #8e8e93; font-size: 0.85rem; }
+
+.apt-date { text-align: right; display: flex; flex-direction: column; }
+.date { font-weight: 800; color: #1a1a1a; }
+.time { font-size: 0.85rem; color: #8e8e93; }
+
+.action-btn.full-width {
+  width: 100%;
+  background: #3366FF;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .apt-item { flex-direction: column; text-align: center; gap: 10px; }
+  .apt-date { text-align: center; }
+}

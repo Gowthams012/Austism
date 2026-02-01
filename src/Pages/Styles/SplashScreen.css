@@ -1,0 +1,71 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 10% 10%, #e8f9f7 0%, #ffffff 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.splash-subtitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 1.2px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+/* Loading Bar Styles */
+.loader-track {
+  width: 140px;
+  height: 3px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  width: 0%;
+  background: #3366FF;
+  animation: load 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes load {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}

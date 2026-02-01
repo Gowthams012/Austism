@@ -1,0 +1,148 @@
+.chatbot-wrapper {
+  height: 100vh;
+  background: radial-gradient(circle at 5% 5%, #e8f9f7 0%, #ffffff 40%);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.brand-text { font-weight: 800; color: #1a1a1a; }
+.ai-badge { font-size: 0.6rem; background: #e8f9f7; color: #45d1c1; padding: 2px 6px; border-radius: 4px; margin-left: 4px; }
+
+.chat-container {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Hide scrollbar for clean look */
+.message-list::-webkit-scrollbar { width: 4px; }
+.message-list::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+
+.chat-bubble-wrapper { display: flex; width: 100%; }
+.chat-bubble-wrapper.user { justify-content: flex-end; }
+.chat-bubble-wrapper.ai { justify-content: flex-start; }
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.user .chat-bubble {
+  background: #3366FF;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.ai .chat-bubble {
+  background: white;
+  color: #1a1a1a;
+  border: 1px solid #f2f2f7;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-footer {
+  padding: 20px 0;
+  background: transparent;
+}
+
+.quick-suggestions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.quick-suggestions button {
+  white-space: nowrap;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.quick-suggestions button:hover {
+  border-color: #3366FF;
+  color: #3366FF;
+}
+
+.chat-input-form {
+  display: flex;
+  background: white;
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f2f2f7;
+}
+
+.chat-input-form input {
+  flex: 1;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.send-btn {
+  background: #3366FF;
+  border: none;
+  width: 50px; /* Slightly larger for better tap target */
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0; /* Prevents button from squashing when text is long */
+  padding: 0;
+}
+
+.send-btn:hover {
+  background: #254EDB;
+  transform: scale(1.05);
+}
+
+.send-btn:active {
+  transform: scale(0.95);
+}
+
+.send-btn svg {
+  /* This ensures the SVG is centered and clear */
+  display: block;
+  margin-left: 1px; /* Visual alignment for paper plane icons */
+}
