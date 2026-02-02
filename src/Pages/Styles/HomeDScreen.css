@@ -1,0 +1,75 @@
+.doctor-home-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at 5% 5%, #e8f9f7 0%, #ffffff 40%);
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+
+/* Reusing Nav and Layout styles from Parent Home for consistency */
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.brand-group { display: flex; align-items: center; gap: 10px; }
+.brand-text { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+.badge { font-size: 0.65rem; background: #3366FF; color: white; padding: 2px 6px; border-radius: 4px; vertical-align: middle; }
+
+.profile-section { display: flex; align-items: center; gap: 12px; }
+.dr-name { font-size: 0.9rem; font-weight: 600; color: #8e8e93; }
+
+.user-avatar {
+  width: 38px; height: 38px;
+  background: #3366FF; color: white;
+  border-radius: 12px; display: flex;
+  align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700;
+}
+
+.dashboard-content { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+/* Interaction Card Component */
+.interaction-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  margin-bottom: 1.5rem;
+}
+
+.primary-action { display: flex; align-items: center; gap: 20px; border: 1px solid rgba(51, 102, 255, 0.1); }
+.icon-box { width: 56px; height: 56px; background: rgba(51, 102, 255, 0.08); border-radius: 16px; display: flex; justify-content: center; align-items: center; color: #3366FF; font-size: 1.8rem; }
+.action-btn { margin-left: auto; background: #3366FF; color: white; border: none; padding: 12px 24px; border-radius: 14px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.action-btn:hover { background: #254EDB; }
+
+/* Patient Table Styles */
+.stat-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+.label { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; color: #8e8e93; }
+.btn-text { background: none; border: none; color: #3366FF; font-weight: 600; cursor: pointer; }
+
+.table-header { display: grid; grid-template-columns: 2fr 1fr 2fr 1fr; padding-bottom: 12px; border-bottom: 2px solid #f2f2f7; font-weight: 700; font-size: 0.85rem; color: #8e8e93; }
+.table-row { display: grid; grid-template-columns: 2fr 1fr 2fr 1fr; padding: 16px 0; border-bottom: 1px solid #f2f2f7; align-items: center; }
+
+.patient-name { font-weight: 600; color: #1a1a1a; }
+.status-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; width: fit-content; }
+
+/* Status Color Coding */
+.screening-pending { background: #fff4e5; color: #ff9800; }
+.report-ready { background: #e8f9f7; color: #45d1c1; }
+.follow-up { background: #f2f2f7; color: #3366FF; }
+
+.view-link { background: none; border: 1px solid #f2f2f7; color: #3366FF; padding: 6px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.view-link:hover { background: #f2f2f7; }
+
+@media (max-width: 768px) {
+  .table-header { display: none; }
+  .table-row { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .primary-action { flex-direction: column; text-align: center; }
+  .action-btn { margin: 10px auto 0; width: 100%; }
+}

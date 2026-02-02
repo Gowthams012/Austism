@@ -1,0 +1,97 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0fdfa 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-card {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.12) 0%, rgba(93, 206, 216, 0.12) 100%);
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.2);
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.brain-icon {
+  width: 80px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(74, 144, 226, 0.15));
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.splash-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.splash-subtitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 1.2px;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+/* Loading Bar Styles */
+.loader-track {
+  width: 140px;
+  height: 3px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4A90E2 0%, #5DCED8 100%);
+  border-radius: 10px;
+  animation: load 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}

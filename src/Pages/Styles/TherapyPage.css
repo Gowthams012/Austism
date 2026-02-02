@@ -1,0 +1,66 @@
+.therapy-wrapper {
+  min-height: 100vh;
+  background: radial-gradient(circle at 5% 5%, #e8f9f7 0%, #ffffff 40%);
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.brand-group { display: flex; align-items: center; gap: 10px; }
+.brand-text { font-weight: 800; font-size: 1.1rem; }
+
+.user-avatar {
+  width: 38px; height: 38px;
+  background: #3366FF; color: white;
+  border-radius: 12px; display: flex;
+  align-items: center; justify-content: center;
+  font-weight: 700;
+}
+
+.dashboard-content { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+.interaction-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+}
+
+.label { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; color: #8e8e93; letter-spacing: 0.8px; }
+
+/* Therapy Box */
+.active-therapy-box { display: flex; align-items: center; gap: 15px; margin-top: 1rem; }
+.therapy-icon { font-size: 2.5rem; }
+.therapy-details h4 { margin: 0; color: #3366FF; }
+.therapy-details p { margin: 4px 0 0; font-size: 0.85rem; color: #8e8e93; }
+.status-badge.active { background: #e8f9f7; color: #45d1c1; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+
+/* Scoring Circle */
+.score-main { display: flex; align-items: center; gap: 40px; margin-top: 1.5rem; }
+.circular-chart { display: block; margin: 0 auto; max-width: 120px; max-height: 120px; }
+.circle-bg { fill: none; stroke: #eee; stroke-width: 3.8; }
+.circle { fill: none; stroke-width: 3.8; stroke-linecap: round; animation: progress 1s ease-out forwards; stroke: #3366FF; }
+.percentage { fill: #3366FF; font-family: sans-serif; font-size: 0.5rem; text-anchor: middle; font-weight: 800; }
+
+.score-meta p { margin: 8px 0; font-size: 0.9rem; color: #1a1a1a; }
+.score-meta strong { color: #8e8e93; }
+
+/* Feedback Trends */
+.ai-insight { font-style: italic; background: #f8f9ff; padding: 15px; border-radius: 12px; border-left: 4px solid #3366FF; line-height: 1.5; margin-bottom: 20px; }
+.trend-bar { height: 24px; background: #f2f2f7; border-radius: 12px; position: relative; overflow: hidden; }
+.trend-fill { height: 100%; background: linear-gradient(90deg, #3366FF, #45d1c1); }
+.trend-label { position: absolute; width: 100%; text-align: center; top: 3px; font-size: 0.75rem; font-weight: 700; color: #1a1a1a; }
+
+@media (max-width: 600px) {
+  .score-main { flex-direction: column; text-align: center; }
+}
