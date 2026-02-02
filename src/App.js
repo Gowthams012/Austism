@@ -1,3 +1,4 @@
+import AuthRoutes from './AuthRoutes';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, BrowserRouter } from 'react-router-dom';
 
@@ -24,6 +25,8 @@ function App() {
         <Route path="/doctorconnect" element={<DoctorConnect />} />
         <Route path="/chatbot" element={<Chatbot />} />
       </Routes>
+      {/* Auth routes are rendered here, outside the main <Routes> to avoid affecting existing routes */}
+      <AuthRoutes />
     </BrowserRouter>
   );
 }

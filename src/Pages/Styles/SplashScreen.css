@@ -18,13 +18,15 @@
 
 .logo-card {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 16px;
+  border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   margin-bottom: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 140px;
+  max-height: 140px;
 }
 
 .splash-title {
@@ -58,6 +60,12 @@
   width: 0%;
   background: #3366FF;
   animation: load 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.splash-logo {
+  width: clamp(72px, 18vw, 110px);
+  height: auto;
+  display: block;
 }
 
 @keyframes load {
